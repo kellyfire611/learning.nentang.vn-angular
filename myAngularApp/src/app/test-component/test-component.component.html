@@ -1,0 +1,20 @@
+<h1>Test Table Cận lâm sàng</h1>
+<table class="table-canlamsang">
+  <thead>
+    <tr class="style-title-table-stt text-header text-uppercase text-left">
+      <th colspan="2">Phòng thực hiện</th>
+      <th class="border-th-header">tổng số</th>
+      <th class="border-th-header">đang gọi</th>
+      <th class="border-th-header">còn chờ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let m of tableManager.results.slice((tableManager.page - 1) * tableManager.offset, tableManager.page * tableManager.offset)">
+      <td colspan="2">{{ m.phongthuchien }}</td>
+      <td>{{ m.tongso }}</td>
+      <td>{{ m.danggoi }}</td>
+      <td>{{ m.dangcho }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,56 @@
+<h1>Test Table Cận lâm sàng Responsive</h1>
+<div class="table" id="results">
+  <div class='theader'>
+    <div class='table_header'>TT</div>
+    <div class='table_header'>Tên phòng</div>
+    <div class='table_header'>Bác sĩ</div>
+    <div class='table_header'>Trạng thái</div>
+    <div class='table_header'>Mô tả</div>
+    <div class='table_header'>Tổng BN</div>
+    <div class='table_header'>Đang gọi</div>
+    <div class='table_header'>Đang chờ</div>
+    <div class='table_header'>Đã xong</div>
+    <div class='table_header'>Ưu tiên</div>
+    <div class='table_header'>###</div>
+  </div>
+  <div class='table_row'
+    *ngFor="let m of tableManager.results.slice((tableManager.page - 1) * tableManager.offset, tableManager.page * tableManager.offset)">
+    <div class='table_small'>
+      <div class='table_cell'>{{ m.stt }}</div>
+    </div>
+    <div class='table_small'>
+      <div class='table_cell'>
+        <span class="phongthuchien">{{ m.phongthuchien }}</span>
+        <span class="phongthuchien_sophong">{{ m.tmp_phongthuchien_sophong }}</span>
+        <span class="phongthuchien_ten">{{ m.tmp_phongthuchien_ten }}</span>
+      </div>
+    </div>
+    <div class='table_small'>
+      <div class='table_cell'>{{ m.bacsi }}</div>
+    </div>
+    <div class='table_small'>
+      <div class='table_cell'>{{ m.trangthai }}</div>
+    </div>
+    <div class='table_small'>
+      <div class='table_cell'>{{ m.mota }}</div>
+    </div>
+    <div class='table_small'>
+      <div class='table_cell'>{{ m.tongso }}</div>
+    </div>
+    <div class='table_small'>
+      <div class='table_cell'>{{ m.danggoi }}</div>
+    </div>
+    <div class='table_small'>
+      <div class='table_cell'>{{ m.dangcho }}</div>
+    </div>
+    <div class='table_small'>
+      <div class='table_cell'>{{ m.daxong }}</div>
+    </div>
+    <div class='table_small'>
+      <div class='table_cell'>{{ m.uutien }}</div>
+    </div>
+    <div class='table_small'>
+      <div class='table_cell'>###</div>
+    </div>
+  </div>
+</div>
